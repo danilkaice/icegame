@@ -1,5 +1,109 @@
+/* подключение шрифта */
+@font-face {
+    font-family: 'monsterrat';
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+
+/* стили всей страницы */
 *{
+    font-family: monsterrat;
     padding: 0;
     margin: 0;
-    background-color: #2d283e;
+    color: #d1d7e0;
+}
+body{
+    background-color: #2d283e; 
+}
+
+/* шапка */
+header{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.head{
+    width: 1000px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 520px;
+    justify-content: center;
+    align-items: center;
+}
+/* логотип */
+.logo{
+    display: grid;
+    grid-template-columns: repeat(2,max-content);
+    column-gap: 10px;
+    align-content: center;
+}
+.logo img{
+    width: 80px;
+}
+.namelogo{
+    display: grid;
+    grid-template-rows: repeat(2,max-content);
+    align-content: center;
+}
+#nameBlog{
+    font-size: 34px;
+    font-weight: bold;
+}
+/* ссылки в шапке */
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #802bb1;
+}
+.links a{
+    font-size: 18px;
+}
+.links{
+    display: grid;
+    grid-template-columns: repeat(2,max-content);
+    column-gap: 30px;
+}
+
+/* основная секция */
+section{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.main{
+    width: 1000px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-rows: repeat();
+    row-gap: 30px;
+    justify-content: center;
+}
+.posts{
+    display: grid;
+    grid-template-columns: repeat(3,320px);
+    gap: 20px;   
+}
+/* посты */
+.post{
+    display: grid;
+    grid-template-columns: repeat(1, 320px);
+    row-gap: 10px;
+    padding: 10px;
+    background-color: #564f6f;
+}
+.post img{
+    width: 300px;
+}
+.post p{
+    width: 300px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow:hidden;
+}
+.post a{
+    font-weight: bolder;
+    margin-left: 180px;
 }
