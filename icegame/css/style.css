@@ -108,7 +108,7 @@ section{
 .post p{
     width: 300px;
     display: -webkit-box;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow:hidden;
 }
@@ -149,4 +149,22 @@ footer{
 }
 .rights span{
     opacity: 0.5;
+}
+
+/* пост */
+.postBig{
+    display: grid;
+    width: 1000px;
+    grid-template-columns: repeat(1,1000px);
+    gap: 20px;
+    background-color: #564f6f;
+    justify-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.postBig img{
+    width: 960px;
+}
+.postBig p{
+    width: 960px;
 }

@@ -11,7 +11,7 @@
     <div class="wrapper">
         <!-- шапка -->
         <?php
-            require 'php/header.php';
+            require 'php/headerMain.php';
         ?>
 
         <!-- основная секция -->
@@ -28,7 +28,7 @@
 
         <!-- подвал -->
         <?php
-            require 'php/footer.php';
+            require 'php/footerMain.php';
         ?>
     </div>
 </body>

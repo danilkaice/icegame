@@ -2,7 +2,7 @@
     <div class="head">
         <!-- логотип -->
         <div class="logo">
-            <img src="../../img/logo.png" alt="">
+            <img src="img/logo.png" alt="">
             <div class="namelogo">
                 <span id="nameBlog">IceGame</span>
                 <span>by TwentyOneIce Studio</span>
