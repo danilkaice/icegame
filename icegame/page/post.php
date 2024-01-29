@@ -28,7 +28,7 @@
                     session_start();
                         if (!empty($_SESSION['auth']) && $_SESSION['role'] == 1){
                             echo '<a href="">Администратор '. $_SESSION['nameUser'].'</a>';
-                            echo '<a href="logout.php">Выход</a>';
+                            echo '<a href="../logout.php">Выход</a>';
                         }
                         elseif (!empty($_SESSION['auth'])){
                             echo '<a href="">Привет, '. $_SESSION['nameUser'].'</a>';
@@ -63,9 +63,9 @@
                         }
                     ?>
                 </div>
-                <!-- коментарии -->
+                <!-- комментарии -->
                 <div class="coments">
-                        <h1>Коментарии:</h1>
+                        <h1>Комментарии:</h1>
                         <?php
                             $id = $_GET['id'];
 
@@ -76,9 +76,9 @@
                                 foreach($result as $coment){
                                     if($coment['approv'] == true || $_SESSION['role'] == 1){
                                         echo '<div class="coment">';
-                                        if($_SESSION['role'] == 1 && $coment['approv'] == false){
+                                        if($_SESSION['role'] == 1 && $coment['approv'] == false && !empty($_SESSION['auth'])){
                                             echo '<div>';
-                                            echo '<h2>Не одобренный коментарий</h2>';
+                                            echo '<h2>Не одобренный комментарий</h2>';
                                             echo '<a href="../../php/approvComent.php/?id='.$coment['idComents'].'">Одобрить</a>';
                                             echo '</div>';
                                         }
@@ -86,7 +86,7 @@
                                         echo '<h4>'.$coment['nameUser'].'</h4>';
                                         echo '<p>'.$coment['text'].'</p>';
                                         echo '</div>';
-                                        if($_SESSION['role'] == 1){
+                                        if($_SESSION['role'] == 1 && !empty($_SESSION['auth'])){
                                             echo '<a href="../../php/delComent.php?id='.$coment['idComents'].'">Удалить</a>';
                                         }
                                         echo '</div>';
@@ -98,7 +98,7 @@
                         <?php
                             if (!empty($_SESSION['auth'])) {
                                 echo '<form action="../../php/addComent.php" method="POST" class="addComent">';
-                                echo '<textarea placeholder="Оставьте свой коментарий" name="text" maxlength="500" required></textarea>';
+                                echo '<textarea placeholder="Оставьте свой комментарий" name="text" maxlength="500" required></textarea>';
                                 echo '<input type="submit" value="Оставить">';
                                 echo '</form>';
                             }

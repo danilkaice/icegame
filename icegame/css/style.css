@@ -115,7 +115,7 @@ section{
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    height: 42px;
+    height: 40px;
     overflow:hidden;
 }
 .post a{
@@ -181,7 +181,7 @@ footer{
     width: 960px;
 }
 
-/* коментарии */
+/* комьентарии */
 .coments{
     display: grid;
     grid-template-columns: repeat(1,1000px);
